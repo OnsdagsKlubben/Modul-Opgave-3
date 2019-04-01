@@ -1,0 +1,25 @@
+# VSCode
+.settings/
+.classpath
+.project
+.vscode/
+
+# Eclipse
+.classpath
+.project
+.settings/
+ 
+# Intellij
+.idea/
+*.iml
+*.iws
+# Mac
+.DS_Store
+ 
+# Maven
+log/
+target/
+out/
+
+# Main class for testing 
+src/main/java/org/dat18c/shiplib/Program.java
