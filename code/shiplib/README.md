@@ -1,1 +1,0 @@
-# The Ships & Sails Code Library :books:
