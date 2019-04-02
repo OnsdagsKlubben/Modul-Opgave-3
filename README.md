@@ -1,2 +1,1 @@
-﻿# Ships & Sails module exercise :sailboat:
-⚓️ :anchor:
+﻿# :anchor: Ships & Sails module exercise :sailboat:
