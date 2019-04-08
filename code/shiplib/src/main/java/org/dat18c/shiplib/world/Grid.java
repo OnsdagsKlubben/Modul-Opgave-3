@@ -5,6 +5,7 @@ package org.dat18c.shiplib.world;
 
 public class Grid
 {
+<<<<<<< HEAD
     Tile [][] grid;
     MapSize size = MapSize.BIG;
 
@@ -26,3 +27,8 @@ public class Grid
 
 
 
+=======
+    MapSize size = MapSize.SMALL;
+    
+}
+>>>>>>> f2cf4d5ab4493279cbeb09a14d35ffee1772ae36
