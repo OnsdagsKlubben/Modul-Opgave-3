@@ -1,39 +1,32 @@
 package org.dat18c.shiplib.world;
 
-public class Coordinate 
-{
+public class Coordinate {
     private int x;
     private int y;
 
-    public Coordinate(int x, int y) 
-    {
+    public Coordinate(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public int getX() 
-    {
+    public int getX() {
         return x;
     }
 
-    public void setX(int x) 
-    {
+    public void setX(int x) {
         this.x = x;
     }
 
-    public int getY() 
-    {
+    public int getY() {
         return y;
     }
 
-    public void setY(int y) 
-    {
+    public void setY(int y) {
         this.y = y;
     }
 
     @Override
-    public String toString()
-    {
-        return String.format("(%s, %s)", x,y);
+    public String toString() {
+        return String.format("(%s, %s)", x, y);
     }
 }

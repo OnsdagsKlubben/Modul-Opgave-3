@@ -6,6 +6,7 @@ public class Tile {
     private int y;
 
     public initTiles
+
     {
 
 

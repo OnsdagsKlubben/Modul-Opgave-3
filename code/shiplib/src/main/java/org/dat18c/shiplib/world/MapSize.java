@@ -1,6 +1,7 @@
 package org.dat18c.shiplib.world;
 
-<<<<<<< HEAD
+<<<<<<<HEAD
+
 public enum MapSize {
 
     BIG,
@@ -8,9 +9,9 @@ public enum MapSize {
 
 }
 =======
-public enum MapSize
-{
+
+public enum MapSize {
     SMALL,
     BIG
 }
->>>>>>> f2cf4d5ab4493279cbeb09a14d35ffee1772ae36
+>>>>>>>f2cf4d5ab4493279cbeb09a14d35ffee1772ae36
