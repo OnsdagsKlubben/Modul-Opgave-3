@@ -1,4 +1,4 @@
-package org.dat18c.ships_and_sails.shipsandsails;
+package org.dat18c.ships_and_sails;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
