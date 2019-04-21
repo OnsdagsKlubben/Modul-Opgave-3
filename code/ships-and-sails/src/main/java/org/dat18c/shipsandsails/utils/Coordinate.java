@@ -1,4 +1,4 @@
-package org.dat18c.shipsandsails.world;
+package org.dat18c.shipsandsails.utils;
 
 public class Coordinate 
 {
@@ -12,28 +12,28 @@ public class Coordinate
     }
 
     /**
-     * @return the x coordinate
+     * @return the x
      */
     public int getX() 
     {
         return x;
     }
     /**
-     * @return the y coordinate
-     */
-    public int getY() 
-    {
-        return y;
-    }
-    /**
-     * @param x the x coordinate to set
+     * @param x the x to set
      */
     public void setX(int x) 
     {
         this.x = x;
     }
     /**
-     * @param y the y coordinate to set
+     * @return the y
+     */
+    public int getY() 
+    {
+        return y;
+    }
+    /**
+     * @param y the y to set
      */
     public void setY(int y) 
     {
@@ -45,7 +45,7 @@ public class Coordinate
     {
         return String.format("(%s, %s)", x,y);
     }
-
+    
     @Override
     public boolean equals(Object obj) 
     {
@@ -56,7 +56,8 @@ public class Coordinate
         } 
         catch (Exception e) 
         {
-            return false;
-        }
+            System.out.println(e.toString());
+            return false;        
+        }    
     }
 }
