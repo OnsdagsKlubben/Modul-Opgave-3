@@ -16,7 +16,7 @@ public final class SocketCommunicator
     {
         try 
         {
-			this.dis = new DataInputStream(connection.getSocket().getInputStream());
+            this.dis = new DataInputStream(connection.getSocket().getInputStream());
             this.dos = new DataOutputStream(connection.getSocket().getOutputStream());
         } 
         catch (IOException e) 

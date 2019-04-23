@@ -18,7 +18,7 @@ public final class ClientConnection implements IConnection
         catch (IOException e) 
         {
 			System.out.println(e.toString());
-		}
+        }
     }
 
     /**
