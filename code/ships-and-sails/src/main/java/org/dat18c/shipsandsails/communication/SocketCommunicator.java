@@ -21,24 +21,24 @@ public final class SocketCommunicator
         } 
         catch (IOException e) 
         {
-			System.out.println(e.toString());
-		}
+            System.out.println(e.toString());
+        }
     }
 
-    public void write(String msg)
+    public void write(String msg) 
     {
         try 
         {
-			dos.writeUTF(msg);
+            dos.writeUTF(msg);
             dos.flush();
         } 
         catch (IOException e) 
         {
-			System.out.println(e.toString());
-		}
+            System.out.println(e.toString());
+        }
     }
 
-    public String read()
+    public String read() 
     {
         try 
         {

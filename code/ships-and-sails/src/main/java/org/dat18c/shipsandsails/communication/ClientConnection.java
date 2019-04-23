@@ -17,7 +17,7 @@ public final class ClientConnection implements IConnection
         } 
         catch (IOException e) 
         {
-			System.out.println(e.toString());
+            System.out.println(e.toString());
         }
     }
 
@@ -53,6 +53,6 @@ public final class ClientConnection implements IConnection
         {
             System.out.println(e.toString());
             return false;
-		}
+        }
     }
 }
