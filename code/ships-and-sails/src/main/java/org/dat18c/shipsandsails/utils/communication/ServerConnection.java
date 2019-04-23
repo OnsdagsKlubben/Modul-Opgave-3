@@ -10,33 +10,28 @@ import java.net.Socket;
  * {@code ServerConnection} is only used for establishing a connection to a server.
  * @author Frederik Lundbeck Jørgensen
  */
-public final class ServerConnection 
+public final class ServerConnection implements IConnection
 {
     /**
      * A constant variable for the connection timeout, in Milliseconds.
      */
     public static final int CONNECTION_TIMEOUT = 5000; 
 
-    private Socket clientSocket = null;
-
+    private Socket socket = null;
     private int port;
     private InetAddress address;
 
     public ServerConnection() 
     {
-        clientSocket = new Socket();
+        socket = new Socket();
     }
 
     /**
      * @return the connected socket object.
      */
-    public Socket getClientSocket() 
+    public Socket getSocket() 
     {
-        if (clientSocket != null) 
-        {
-            return clientSocket;
-        }
-        return null;
+       return socket;
     }
 
     /**
@@ -44,13 +39,13 @@ public final class ServerConnection
      * {@code CONNECTION_TIMEOUT} value in milliseconds.
      * @return a boolean on whether or not the connection was successful.
      */
-    public boolean startConnection(InetAddress address, int port)
+    public boolean tryConnect(InetAddress address, int port)
     {
         try 
         {
-            clientSocket.connect(new InetSocketAddress(address, port), CONNECTION_TIMEOUT);
+            socket.connect(new InetSocketAddress(address, port), CONNECTION_TIMEOUT);
 
-            if (clientSocket.isConnected()) 
+            if (socket.isConnected()) 
             {
                 this.address = address;
                 this.port = port;
@@ -68,11 +63,11 @@ public final class ServerConnection
     /**
      * Tries to close the connection nicely.
      */
-    public boolean closeConnection()
+    public boolean tryClose()
     {
         try
         {
-            clientSocket.close();
+            socket.close();
             return true;
         }
         catch(Exception e)

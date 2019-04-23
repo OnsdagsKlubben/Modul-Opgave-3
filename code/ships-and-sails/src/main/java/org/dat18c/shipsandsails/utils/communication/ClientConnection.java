@@ -2,34 +2,38 @@ package org.dat18c.shipsandsails.utils.communication;
 
 import java.io.IOException;
 import java.net.ServerSocket;
+import java.net.Socket;
 
-public final class ClientConnection 
+public final class ClientConnection implements IConnection
 {
-    private ServerSocket serverSocket = null;
-    private int port;
+    private ServerSocket serverSocket;
+    private Socket clientSocket;
 
     public ClientConnection(int port) 
     {
-        this.port = port;
+        try 
+        {
+            this.serverSocket = new ServerSocket(port);
+        } 
+        catch (IOException e) 
+        {
+			System.out.println(e.toString());
+		}
     }
 
     /**
-     * @return the serverSocket
+     * @return the clientSocket
      */
-    public ServerSocket getServerSocket() 
+    public Socket getSocket() 
     {
-        if (serverSocket != null) 
-        {
-            return serverSocket;
-        }
-        return null;
+        return clientSocket;
     }
 
-    public void waitForClientConnection()
+    public void waitForClient()
     {
         try 
         {
-            serverSocket = new ServerSocket(); //Can throw when opening the socket!  
+            clientSocket = serverSocket.accept();
         } 
         catch (IOException e) 
         {
@@ -37,16 +41,18 @@ public final class ClientConnection
         }
     }
 
-    public void closeConnection()
+    public boolean tryClose()
     {
-        try
+        try 
         {
+            clientSocket.close();
             serverSocket.close();
-        }
-        catch(IOException e)
+            return true;
+        } 
+        catch (IOException e) 
         {
             System.out.println(e.toString());
-        }
+            return false;
+		}
     }
-
 }
