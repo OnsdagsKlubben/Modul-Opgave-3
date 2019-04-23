@@ -2,19 +2,14 @@ package org.dat18c.shipsandsails.enums.ships;
 
 public enum ShipType
 {
-    BRIG("Brigade"),
-    SOTL("Ship of the line"),
-    MAW("Man at war");
+    BRIG(0),
+    SOTL(1),
+    MAW(2);
 
-    private final String name;
+    private final int id;
 
-    ShipType(String name)
+    ShipType(int id)
     {
-        this.name = name;
-    }
-
-    public String getShipTypeName()
-    {
-        return this.name;
+        this.id = id;
     }
 }

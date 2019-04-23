@@ -1,4 +1,4 @@
-package org.dat18c.shipsandsails.utils.communication;
+package org.dat18c.shipsandsails.communication;
 
 import java.net.Socket;
 
