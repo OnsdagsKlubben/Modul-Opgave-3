@@ -9,6 +9,7 @@ public final class GameManager
 
     private GameManager()
     {
+        
     }
 
     public static GameManager getInstance()
@@ -24,10 +25,9 @@ public final class GameManager
     {
 
     }
-    
-    private void stopGame()
-    {
-        
-    }
 
+    private void loop()
+    {
+
+    }
 }

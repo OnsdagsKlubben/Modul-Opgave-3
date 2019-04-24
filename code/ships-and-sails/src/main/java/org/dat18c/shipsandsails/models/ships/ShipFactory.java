@@ -2,7 +2,7 @@ package org.dat18c.shipsandsails.models.ships;
 
 import org.dat18c.shipsandsails.enums.ships.ShipType;
 import org.dat18c.shipsandsails.enums.world.Direction;
-import org.dat18c.shipsandsails.models.Coordinate;
+import org.dat18c.shipsandsails.models.world.Coordinate;
 
 /**
  * ShipFactory

@@ -1,4 +1,4 @@
-package org.dat18c.shipsandsails.models;
+package org.dat18c.shipsandsails.models.world;
 
 public class Coordinate 
 {
